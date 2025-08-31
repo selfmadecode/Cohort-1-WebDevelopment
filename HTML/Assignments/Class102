@@ -1,0 +1,40 @@
+
+ASSIGNMENT 1: Favicon
+- Add your own favicon (any small image).
+
+ASSIGNMENT 2: Line Break
+- Write a paragraph about your work routine.
+- Use <br> to break it into at least 3 lines.
+
+ASSIGNMENT 3: Elements
+- Create 10 example of a block element.
+- Create 5 example of an inline element.
+
+ASSIGNMENT 4: Images
+- Add an image with a src and alt text.
+- Add another image using srcset (choose at least 3 image sizes).
+
+ASSIGNMENT 5: Attributes
+- Create a hyperlink that opens in the same tab.
+- Create another hyperlink that opens in a new tab.
+
+ASSIGNMENT 6: Classes vs IDs
+- Make 3 paragraphs elements that share the same class name.
+- Give one paragraph a unique ID.
+- Try using the SAME ID on 2 elements, explain why it is not good to do so.
+
+ASSIGNMENT 7: Comments
+- Add a comment above your paragraph that explains what it is about.
+- Add a comment that says “Fix this later” above a broken link.
+
+ASSIGNMENT 8: Alt Text Practice
+- Add an image and give it an incorrect src (so it won’t load).
+- Check if the alt text in the image altribute shows in the browser.
+- explain the importance of alt text.
+
+ASSIGNMENT 9: Practice Page Structure
+- Create a small "About Me" section with:
+- A heading
+- A paragraph about yourself
+- An image (real or placeholder)
+- A link to any favorite website
