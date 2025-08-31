@@ -1,0 +1,62 @@
+.headerParentDiv{
+    display: flex;
+    background-color: white;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid black;
+}
+
+.nav-links{
+    list-style: none;
+    display: flex;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li a{
+    font-size: 15px;
+    text-decoration: none;
+    color: #000;
+}
+
+.nav-links li a:hover{
+    color: blue;
+    border-bottom: 2px solid black;
+    padding-bottom: 3px;
+}
+
+.navAction{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.search-box{
+    display: flex;
+    align-items: center;
+    border: 1px solid #ddd;
+    border-radius: 20px;
+    padding: 5px 10px;
+}
+
+.search-box input{
+    border: none;
+    outline: none;
+    font-size: 14px;
+    padding: 5px;
+    width: 200px;
+}
+
+.search-box .material-icons{
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}
+
+.navAction .material-icons{
+    font-size: 24px;
+    color: #000;
+    cursor: pointer;
+}
