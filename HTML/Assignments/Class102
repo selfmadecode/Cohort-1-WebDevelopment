@@ -4,14 +4,14 @@ ASSIGNMENT 1: Favicon
 
 ASSIGNMENT 2: Line Break
 - Write a paragraph about your work routine.
-- Use <br> to break it into at least 3 lines.
+- Use break tag to break it into at least 3 lines.
 
 ASSIGNMENT 3: Elements
-- Create 10 example of a block element.
+- Create 10 example of a block element aside h1-h6.
 - Create 5 example of an inline element.
 
 ASSIGNMENT 4: Images
-- Add an image with a src and alt text.
+- Add an image with a src altribute and alt altribute.
 - Add another image using srcset (choose at least 3 image sizes).
 
 ASSIGNMENT 5: Attributes
