@@ -128,23 +128,15 @@ Git = your local diary of changes
 GitHub = the online library for your team  
 Repo = the box holding your project and history    
 Commit = a note in your diary  
-Push = sending your diary online
-
+Push = sending your diary online  
 With Git and GitHub, Stephanie, SelfMade, and Nicole can work together, keep their changes safe,
-
 and never worry about losing their work.
 
 # Assignments
-Explain in your own words: What is the difference between Git and GitHub?
-
-Create a new folder on your computer and initialize it with git init.
-
-Create a file app.txt, write something, and track it with git add.
-
-Commit the file with a message.
-
-Change the file and commit again. Observe what happens.
-
-Create a GitHub account and a new repository.
-
-Push your local repo to GitHub and confirm it appears online.
+Explain in your own words: What is the difference between Git and GitHub?  
+Create a new folder on your computer and initialize it with git init.  
+Create a file app.txt, write something, and track it with git add.  
+Commit the file with a message.  
+Change the file and commit again. Observe what happens.  
+Create a GitHub account and a new repository.  
+Push your local repo to GitHub and confirm it appears online.  
