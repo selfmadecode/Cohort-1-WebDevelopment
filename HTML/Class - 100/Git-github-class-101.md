@@ -1,17 +1,18 @@
 # Story: Developers, Git, and GitHub
 
-Meet three developers: **Alice**, **Bob**, and **Charlie**. They want to build a small app together.  
-Alice is adding a login page, Bob is creating a dashboard, and Charlie is making the app look nice.
+Meet three developers: **Stephanie**, **SelfMade**, and **Nicole**. They want to build a small app together.  
+Stephanie is adding a login page, SelfMade is creating a dashboard, and Nicole is making the app look nice.
 
-At first, they just share files by emailing them to each other.  
+At first, they shared their work by emailing files to each other.
+Whenever someone finished their part, they would save the file and send it to one person via email
 But soon they notice problems:
 
-- Alice accidentally deletes part of Bob's dashboard.
-- Charlie makes changes to the login page that Alice is also working on.
-- They have multiple copies of files: *app-final*, *app-final-2*, *app-really-final* ??
+- Stephanie accidentally deletes part of SelfMade's dashboard.
+- Nicole makes changes to the login page that Stephanie is also working on.
+- They have multiple copies of files: *app-final*, *app-final-2*, *app-really-final*
 
-Everyone is confused. They don’t know who changed what, and they can’t easily go back to fix mistakes.  
-This is where **Git** comes to the rescue!
+Now, everyone is confused. They don’t know who changed what, and they can’t easily go back to fix mistakes.  
+This is where **Git, Source Control** comes to the rescue!
 
 ---
 
@@ -32,7 +33,7 @@ Today we will focus on **Git**, which is the most popular.
 
 ## What is Git?
 
-Git is a **tool installed on your computer** that keeps a history of your files.  
+Git is a **tool you install on your computer** that keeps a history of your files.  
 Think of it like a diary. Every time you finish some work, you write a note:  
 *“Added login page”* or *“Fixed typo in dashboard”*.
 
@@ -49,7 +50,7 @@ Git allows you to:
 GitHub is a **website** where developers can store their Git projects online.  
 If Git is your notebook at home, GitHub is like a **shared library** where your team can read and edit your notebook together.
 
-On GitHub, Alice, Bob, and Charlie can:
+On GitHub, Stephanie, SelfMade, and Nicole can:
 
 - Share their code
 - See what everyone else is working on
@@ -60,7 +61,7 @@ On GitHub, Alice, Bob, and Charlie can:
 ## The Problem Git Solves
 
 Without Git, developers often save files with names like:  
-*app-final*, *app-final-2*, *app-really-final* ??
+*app-final*, *app-final-2*, *app-really-final*
 
 With Git:
 
@@ -73,8 +74,8 @@ With Git:
 
 ## What is a Repository (Repo)?
 
-A repository, or **repo**, is like a **box** that holds your project and its history.  
-Inside the box, Git keeps track of all the changes.
+A repository, or **repo**, is like a **box or folder** that holds your project and its history.  
+Inside the folder, Git keeps track of all the changes.
 
 Developers can have:
 
@@ -115,14 +116,12 @@ Send your work online so the team can see it:
    git push origin main
    ```
 
-How Git Tracks Changes
+## How Git Tracks Changes
 
 Git takes snapshots whenever you commit.
 If only a few lines of code changed, Git saves just that part.
 
 This makes it fast and easy for everyone to collaborate.
-
-Story Wrap-Up
 
 So remember:
 
@@ -131,10 +130,10 @@ GitHub = the online library for your team
 Repo = the box holding your project and history
 Commit = a note in your diary
 Push = sending your diary online
-With Git and GitHub, Alice, Bob, and Charlie can work together, keep their changes safe,
+With Git and GitHub, Stephanie, SelfMade, and Nicole can work together, keep their changes safe,
 and never worry about losing their work.
 
-Assignments
+# Assignments
 Explain in your own words: What is the difference between Git and GitHub?
 Create a new folder on your computer and initialize it with git init.
 Create a file app.txt, write something, and track it with git add.
