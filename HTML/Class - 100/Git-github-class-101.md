@@ -47,7 +47,7 @@ Git allows you to:
 
 ## What is GitHub?
 
-GitHub is a **website** where developers can store their Git projects online.  
+GitHub is a **website** where developers can store their Git projects online.
 If Git is your notebook at home, GitHub is like a **shared library** where your team can read and edit your notebook together.
 
 On GitHub, Stephanie, SelfMade, and Nicole can:
@@ -86,7 +86,7 @@ Developers can have:
 
 ## How Developers Start Using Git
 
-1. **Initialize a Repo**  
+**Initialize a Repo**  
    Start tracking your project:
    ```bash
    git init
@@ -124,15 +124,10 @@ If only a few lines of code changed, Git saves just that part.
 This makes it fast and easy for everyone to collaborate.
 
 So remember:
-
-Git = your local diary of changes
-
-GitHub = the online library for your team
-
-Repo = the box holding your project and history
-
-Commit = a note in your diary
-
+Git = your local diary of changes  
+GitHub = the online library for your team  
+Repo = the box holding your project and history    
+Commit = a note in your diary  
 Push = sending your diary online
 
 With Git and GitHub, Stephanie, SelfMade, and Nicole can work together, keep their changes safe,
