@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML Tables for Beginners</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+
+    <h1>Learning HTML Tables</h1>
+    <p>Tables are used to display data in rows and columns, just like in Excel or a grid.</p>
+    <p>A table is made of:
+        <ul>
+            <li><code>&lt;table&gt;</code> → defines the table.</li>
+            <li><code>&lt;tr&gt;</code> → defines a table row (horizontal line).</li>
+            <li><code>&lt;th&gt;</code> → defines a table heading (usually bold and centered).</li>
+            <li><code>&lt;td&gt;</code> → defines table data (normal cells).</li>
+        </ul>
+    </p>
+
+    <!-- Simple Table -->
+    <h2>1. A Simple Table</h2>
+    <p>This table has 3 columns: <b>SN</b>, <b>Name</b>, and <b>Age</b>.  
+    Each row (<code>&lt;tr&gt;</code>) holds one person’s data.</p>
+
+    <table class="simple-table">
+        <tr>
+            <th>SN</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>Nicole</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>James</td>
+            <td>56</td>
+        </tr>
+    </table>
+
+
+    <!-- Colspan Example -->
+    <h2>2. Using <code>colspan</code></h2>
+    <p>
+        Sometimes you want a cell to take up more than one column.  
+        For example, if we want "Full Name" to cover both "First Name" and "Last Name,"  
+        we use <code>colspan="2"</code>.
+    </p>
+
+    <table class="colspan-table">
+        <tr>
+            <th colspan="2">Full Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Uzodike</td>
+            <td>Nicole</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>Anyanwu</td>
+            <td>James</td>
+            <td>56</td>
+        </tr>
+    </table>
+
+
+    <!-- Rowspan Example -->
+    <h2>3. Using <code>rowspan</code></h2>
+    <p>
+        Sometimes a cell should cover more than one row.  
+        For example, if we want "SN" to appear once on the left but stretch down 3 rows,  
+        we use <code>rowspan="3"</code>.
+    </p>
+
+    <table class="rowspan-table">
+        <tr>
+            <th rowspan="3">SN</th>
+            <th>Name</th>
+            <th>Age</th>
+        </tr>
+        <tr>
+            <td>Nicole</td>
+            <td>28</td>
+        </tr>
+        <tr>
+            <td>James</td>
+            <td>56</td>
+        </tr>
+    </table>
+
+
+    <!-- Profile Example -->
+    <h2>4. A Profile Table</h2>
+    <p>
+        Tables can also be used to display information like a profile or contact card.  
+        Here we use rows to show details like phone number and email.
+    </p>
+
+    <table class="profile-table">
+        <tr>
+            <th>SN</th>
+            <td>1</td>
+        </tr>
+        <tr>
+            <th>Phone number</th>
+            <td>0808958477288</td>
+        </tr>
+        <tr>
+            <th>Email</th>
+            <td>jame@gmail.com</td>
+        </tr>
+    </table>
+
+
+    <!-- Table Styling -->
+    <h2>5. Styling Tables with CSS</h2>
+    <p>
+        HTML alone creates plain tables.  
+        To make them beautiful, we use CSS.  
+        With CSS, we can add:
+        <ul>
+            <li><b>Borders</b> → lines around the cells.</li>
+            <li><b>Padding</b> → space inside each cell.</li>
+            <li><b>Colors</b> → background and text colors.</li>
+            <li><b>Border Radius</b> → rounded corners.</li>
+            <li><b>Hover Effects</b> → highlight rows when you move your mouse over them.</li>
+        </ul>
+    </p>
+    <p>Check the <code>style.css</code> file to see how these styles are applied!</p>
+
+</body>
+</html>

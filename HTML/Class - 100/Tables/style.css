@@ -1,0 +1,63 @@
+/* General page styling */
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background: #f8f9fa;
+    color: #333;
+}
+
+h1 {
+    text-align: center;
+    color: #2c3e50;
+}
+
+h2 {
+    margin-top: 40px;
+    color: #34495e;
+}
+
+/* Table general styling */
+table {
+    width: 60%;               /* make tables 60% of page width */
+    margin: 15px auto;        /* center tables */
+    border-collapse: collapse;/* remove double borders */
+    text-align: center;
+    border-radius: 8px;       /* rounded corners */
+    overflow: hidden;         /* keeps rounded edges clean */
+}
+
+/* Table cell styling */
+th, td {
+    border: 2px solid #444;   /* border lines */
+    padding: 10px;            /* space inside each cell */
+}
+
+/* Simple table */
+.simple-table th {
+    background: #3498db;
+    color: white;
+}
+
+/* Colspan example */
+.colspan-table th {
+    background: #2ecc71;
+    color: white;
+}
+
+/* Rowspan example */
+.rowspan-table th {
+    background: #e67e22;
+    color: white;
+}
+
+/* Profile table */
+.profile-table th {
+    text-align: left;  /* align headings to the left */
+    background: #9b59b6;
+    color: white;
+}
+
+/* Hover effect for all tables */
+tr:hover {
+    background: #ecf0f1;
+}
