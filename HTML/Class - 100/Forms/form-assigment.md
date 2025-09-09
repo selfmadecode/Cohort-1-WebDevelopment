@@ -1,4 +1,4 @@
-# 📝 HTML Forms Assignments
+# HTML Forms Assignments
 ## Assignment 1: Simple Contact Form
 **Goal:** Test your knowledge of basic input fields and labels.  
 
