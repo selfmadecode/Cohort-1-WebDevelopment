@@ -1,19 +1,253 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Lecture: The &lt;img&gt; Tag — Beginner's Guide</title>
+  <style>
+    body { font-family: system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; line-height:1.5; max-width:900px; margin:2rem auto; padding:0 1rem; color:#111; }
+    code, pre { background:#f3f4f6; padding:.15rem .3rem; border-radius:4px; font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, "Roboto Mono", monospace; }
+    pre { padding:.8rem; overflow:auto; }
+    h1,h2,h3 { color:#0b5; }
+    table { width:100%; border-collapse:collapse; margin: .5rem 0 1rem; }
+    th, td { text-align:left; padding:.4rem .6rem; border:1px solid #e6e6e6; }
+    .example { border-left:4px solid #e0f2f1; padding:.6rem; background:#fbfffe; margin: .6rem 0; }
+    .note { background:#fff8e1; padding:.5rem; border-left:4px solid #ffd54f; margin:.5rem 0; }
+  </style>
 </head>
 <body>
+  <h1>The &lt;img&gt; Tag</h1>
+  <p>This note explains how to show images on web pages using the <code>&lt;img&gt;</code> element. No prior knowledge required. Copy examples and experiment in a text editor + browser.</p>
 
-    <!-- Relative and absolution path -->
-     <!-- CDN -->
+  <h2>What is &lt;img&gt;?</h2>
+  <p>The <code>&lt;img&gt;</code> element inserts an image into an HTML page. It's an <em>inline replaced element</em> (the browser replaces it with an image graphic). Example:</p>
 
-    <p>Relative path - same folder as this file</p>
-    <img src="same-path-image.png">
+  <div class="example">
+    <pre>&lt;img src="logo.png" alt="Company logo"&gt;</pre>
+  </div>
 
-    <p>Relative path - a folder before this file's folder</p>
-    <img src="">
+  <h2>Important rules</h2>
+  <ul>
+    <li><strong>Every image should have an <code>alt</code> attribute</strong> for accessibility and SEO.</li>
+    <li><code>&lt;img&gt;</code> is <strong>self-closing</strong> in HTML: you don't need a closing tag.</li>
+    <li>If the <code>src</code> file is missing or wrong, the browser shows a broken-image icon or nothing; alt text is used by screen readers.</li>
+  </ul>
+
+  <h2>All the main <code>&lt;img&gt;</code> attributes (explained)</h2>
+
+  <table>
+    <thead>
+      <tr><th>Attribute</th><th>What it does</th><th>Example</th></tr>
+    </thead>
+    <tbody>
+      <tr><td><code>src</code></td><td>URL or path to the image file (required for visible images).</td><td><code>&lt;img src="images/photo.jpg" alt="..."/&gt;</code></td></tr>
+      <tr><td><code>alt</code></td><td>Alternative text used by screen readers and shown when image fails to load — required for accessibility.</td><td><code>alt="A red bicycle parked by a tree"</code></td></tr>
+      <tr><td><code>width</code> / <code>height</code></td><td>Intrinsic width/height in pixels (numbers). Helps layout stability. CSS can also control size.</td><td><code>width="300" height="200"</code></td></tr>
+      <tr><td><code>srcset</code></td><td>Multiple source candidates for responsive images (used with <code>sizes</code>).</td><td><code>srcset="small.jpg 480w, medium.jpg 800w, large.jpg 1600w"</code></td></tr>
+      <tr><td><code>sizes</code></td><td>Hints to the browser how wide the image will appear at different viewport widths.</td><td><code>sizes="(max-width:600px) 100vw, 50vw"</code></td></tr>
+      <tr><td><code>loading</code></td><td>Lazy-load control: <code>lazy</code> defers loading until near viewport, <code>eager</code> loads immediately.</td><td><code>loading="lazy"</code></td></tr>
+      <tr><td><code>decoding</code></td><td>Image decoding hint: <code>async</code> (default), <code>sync</code> (block), or <code>auto</code>.</td><td><code>decoding="async"</code></td></tr>
+      <tr><td><code>crossorigin</code></td><td>Used when the image is fetched across origins and you need CORS behavior: <code>anonymous</code> or <code>use-credentials</code>.</td><td><code>crossorigin="anonymous"</code></td></tr>
+      <tr><td><code>referrerpolicy</code></td><td>Specifies the referrer header policy for the image request (e.g. <code>no-referrer</code>).</td><td><code>referrerpolicy="no-referrer"</code></td></tr>
+      <tr><td><code>usemap</code></td><td>Associate the image with an <code>&lt;map&gt;</code> for clickable regions (<em>image map</em>).</td><td><code>usemap="#mymap"</code></td></tr>
+      <tr><td><code>ismap</code></td><td>Creates a server-side image map (rarely used). Clicking sends coordinates to server.</td><td><code>&lt;img src="map.png" ismap&gt;</code></td></tr>
+      <tr><td><code>title</code></td><td>Tooltip text shown on hover (not a substitute for <code>alt</code>).</td><td><code>title="More info"</code></td></tr>
+      <tr><td><code>longdesc</code></td><td>Old/obsolete method for long descriptions (deprecated; use linked pages or ARIA instead).</td><td>(not recommended)</td></tr>
+      <tr><td><code>role</code> / ARIA</td><td>For accessibility roles — used carefully when semantically necessary.</td><td><code>role="img" aria-label="... (if no alt)"</code></td></tr>
+      <tr><td><code>draggable</code></td><td>Whether image can be dragged: <code>true</code> or <code>false</code>.</td><td><code>draggable="false"</code></td></tr>
+    </tbody>
+  </table>
+
+  <h3>Notes on a few attributes</h3>
+  <ul>
+    <li><strong><code>alt</code> is critical.</strong> If image conveys meaning, write succinct descriptive alt text. If purely decorative, use <code>alt=""</code> (empty) so screen readers ignore it.</li>
+    <li><strong><code>width</code> and <code>height</code></strong> values help the browser reserve layout space and avoid layout shifts when the image loads (improves Core Web Vitals).</li>
+    <li><strong><code>srcset</code> + <code>sizes</code></strong> let you serve different images (small/large) for different screen sizes — essential for responsive images and performance.</li>
+    <li><strong><code>loading="lazy"</code></strong> is a simple way to lazy-load off-screen images to speed up initial page load.</li>
+    <li><strong><code>crossorigin</code></strong> and <code>referrerpolicy</code> affect privacy and whether you can access pixel data (canvas) from images loaded from other origins.</li>
+  </ul>
+
+  <h2>Paths: Locating images locally vs remote</h2>
+  <p>Images are fetched from a URL. There are several kinds of <em>src</em> values:</p>
+  <ol>
+    <li><strong>Relative path (relative to the HTML file):</strong></li>
+    <div class="example">
+      <pre>&lt;!-- same folder as the HTML file --&gt;
+&lt;img src="image.png" alt="Same folder image"&gt;
+
+&lt;!-- subfolder called images --&gt;
+&lt;img src="images/photo.jpg" alt="Photo in images folder"&gt;
+
+&lt;!-- parent folder (go up one level) --&gt;
+&lt;img src="../other-folder/pic.jpg" alt="From parent folder"&gt;
+</pre>
+    </div>
+
+    <li><strong>Root-relative path (starts at website root):</strong>
+      <div class="example">
+        <pre>&lt;img src="/assets/logo.png" alt="Site logo (root-relative)"&gt;</pre>
+      </div>
+    </li>
+
+    <li><strong>Absolute URL (remote/CDN):</strong>
+      <div class="example">
+        <pre>&lt;img src="https://cdn.example.com/images/photo.jpg" alt="From a CDN"&gt;</pre>
+      </div>
+    </li>
+
+    <li><strong>File URL (local files, only useful in local testing):</strong>
+      <div class="example">
+        <pre>&lt;!-- Not recommended for deployed sites --&gt;
+&lt;img src="file:///C:/Users/me/Pictures/photo.jpg" alt="Local file"&gt;</pre>
+      </div>
+    </li>
+  </ol>
+
+  <h3>Using the command line to find images (basic <code>cd</code> examples)</h3>
+  <p>If you edit files in a terminal, you use <code>cd</code> to move between folders. Here are quick examples for a beginner (these commands are run in a terminal / PowerShell / macOS Terminal):</p>
+  <div class="example">
+    <pre># List files in current directory (Linux/macOS)
+ls
+
+# Windows Command Prompt
+dir
+
+# Change directory into a folder named "project"
+cd project
+
+# Go up one folder
+cd ..
+
+# Example: you are in /home/me/project/pages and image is in /home/me/project/images
+# In HTML file inside pages, you reference the image with ../images/pic.jpg
+# Terminal navigation:
+cd /home/me/project/pages
+# to go to images folder:
+cd ../images
+</pre>
+  </div>
+
+  <div class="note">
+    <strong>Tip:</strong> When your HTML file and images are in the same project, think about folder structure first:
+    <pre>project/
+  index.html
+  images/
+    hero.jpg
+    logo.png
+  css/
+    style.css
+</pre>
+    Then from <code>index.html</code> you use <code>src="images/hero.jpg"</code>.
+  </div>
+
+  <h2>Examples: local, CDN, relative, and root paths</h2>
+
+  <div class="example">
+    <pre>&lt;!-- local (relative) example --&gt;
+&lt;img src="./same-path-image.png" alt="Example image in same folder" width="400"&gt;
+
+&lt;!-- parent folder example --&gt;
+&lt;img src="../images/from-parent.jpg" alt="From parent folder"&gt;
+
+&lt;!-- root-relative --&gt;
+&lt;img src="/static/logo.svg" alt="Root relative logo"&gt;
+
+&lt;!-- CDN (remote) example --&gt;
+&lt;img src="https://cdn.example.com/assets/picture.webp" alt="From CDN" width="300"&gt;
+</pre>
+  </div>
+
+  <h2>Responsive images: <code>srcset</code>, <code>sizes</code> and &lt;picture&gt;</h2>
+  <p>Use these when you want different images for different devices (mobile, tablet, desktop) or different image formats (webp vs jpeg).</p>
+
+  <div class="example">
+    <pre>&lt;!-- srcset + sizes --&gt;
+&lt;img
+  src="images/photo-medium.jpg"
+  srcset="images/photo-small.jpg 400w,
+          images/photo-medium.jpg 800w,
+          images/photo-large.jpg 1600w"
+  sizes="(max-width:600px) 100vw, (max-width:1200px) 50vw, 800px"
+  alt="Scenic view"&gt
+
+&lt;!-- picture for format switching --&gt;
+&lt;picture&gt;
+  &lt;source srcset="images/photo.webp" type="image/webp"&gt;
+  &lt;img src="images/photo.jpg" alt="Scenic view (fallback to jpeg)"&gt;
+&lt;/picture&gt;</pre>
+  </div>
+
+  <h2>Accessibility checklist</h2>
+  <ul>
+    <li>Always include <code>alt</code> text. If decorative, use <code>alt=""</code>.</li>
+    <li>Use meaningful <code>alt</code> for content images — describe what the image shows, not file name.</li>
+    <li>Provide captions or long descriptions on the page if the image conveys complex information.</li>
+  </ul>
+
+  <h2>Performance & best practices</h2>
+  <ul>
+    <li>Use appropriately sized images; avoid sending huge images to mobile devices.</li>
+    <li>Compress images (WebP/AVIF are modern formats with better compression).</li>
+    <li>Use <code>width</code> and <code>height</code> attributes (or CSS aspect-ratio) to avoid layout shift.</li>
+    <li>Use <code>loading="lazy"</code> for below-the-fold images to speed up initial load.</li>
+    <li>Use a CDN for public sites to speed global delivery and reduce latency.</li>
+  </ul>
+
+  <h2>Error handling</h2>
+  <p>If an image fails to load, the browser shows broken icon and the <code>alt</code> text becomes important. You can also use JavaScript to handle <code>onerror</code> and provide a fallback:</p>
+  <div class="example">
+    <pre>&lt;img src="maybe-missing.jpg" alt="Fallback example" onerror="this.src='fallback.jpg';"&gt;</pre>
+  </div>
+
+  <h2>Full page example (put this in a file and open it)</h2>
+  <p>Save as <code>img-lecture-demo.html</code> alongside an <code>images</code> folder (or change paths to match your files):</p>
+
+  <pre>&lt;!doctype html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+  &lt;meta charset="utf-8"&gt;
+  &lt;meta name="viewport" content="width=device-width,initial-scale=1"&gt;
+  &lt;title&gt;Img tag demo&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;h1&gt;IMG tag demo&lt;/h1&gt;
+
+  &lt;!-- Local (relative) --&gt;
+  &lt;img src="images/example.jpg" alt="Example photo of a mountain" width="600" height="400"&gt;
+
+  &lt;!-- CDN --&gt;
+  &lt;img src="https://via.placeholder.com/300" alt="Placeholder from remote CDN"&gt;
+
+  &lt;!-- Responsive srcset --&gt;
+  &lt;img
+    src="images/photo-medium.jpg"
+    srcset="images/photo-small.jpg 480w, images/photo-medium.jpg 800w, images/photo-large.jpg 1600w"
+    sizes="(max-width:600px) 100vw, 800px"
+    alt="Responsive example"&gt;
+
+  &lt;!-- Lazy load --&gt;
+  &lt;img src="images/large.jpg" alt="Lazy loaded" loading="lazy"&gt;
+&lt;/body&gt;
+&lt;/html&gt;</pre>
+
+  <h2>Quick summary</h2>
+  <ul>
+    <li><code>&lt;img src=... alt=...&gt;</code> — the basics.</li>
+    <li>Use proper paths: relative (<code>./</code>, <code>../</code>), root (<code>/</code>), or absolute/remote (https://...)</li>
+    <li><code>alt</code> is essential for accessibility. Use <code>loading="lazy"</code> for off-screen images.</li>
+    <li>Learn <code>srcset</code> + <code>sizes</code> or <code>&lt;picture&gt;</code> for responsive images and format switching.</li>
+  </ul>
+
+  <h2>Need more examples?</h2>
+  <p>If you want, I can also:</p>
+  <ul>
+    <li>Generate several example images and a sample folder structure you can download and run locally.</li>
+    <li>Create a short interactive quiz to test what you learned.</li>
+    <li>Explain how to convert images to WebP or how to set up a simple CDN link.</li>
+  </ul>
+
+  <footer style="margin-top:2rem; font-size:.9rem; color:#555;">
+    Lecture created for absolute beginners — feel free to copy, edit, and learn. Happy coding! 🖼️
+  </footer>
 </body>
 </html>
