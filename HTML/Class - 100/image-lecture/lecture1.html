@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- Relative path vs the absolute path -->
+     <!-- the same folders -->
+    <img src="same-path-image.png" alt="An image of a televison"> 
+
+    <img src="../image-2.png"> <!-- one folder up -->
+
+    <img src="../../../images/image-1.png"> <!-- three folders up -->
+
+    <!-- Absolute path -->
+    <img src="https://ng.jumia.is/unsafe/fit-in/680x680/filters:fill(white)/product/20/2685814/1.jpg">
+    
+
+    <!-- gif -->
+     <img src="../../../animated-love-image-0187.gif" alt="Aniumated love"> 
+
+     <!-- image tag is inline -->
+     <a> Click me
+        <span><img src="../../../animated-love-image-0187.gif" alt="Aniumated love"></span>
+     </a>
+
+     <!-- types -->
+     <!-- gif, png, jpg/jpeg, svg, ico -->
+
+     <img src="same-path-image.png" alt=""
+     srcset="
+     ../../../images/image-1.png 480w,
+     ../../../images/image-2.png 800w,
+     images/one-photo.png 1200w"
+     
+     sizes="(max-width: 600px) 480px, 800px">
+
+     <p style="background-image:url(../../../images/image-1.png);
+     height: 500px;
+     font-size: 50px;
+     color: white;
+     background-repeat: no-repeat;
+     background-size: cover;
+     background-position: center;
+     ">
+        This is a paragraph with a background image.
+
+        <img src="same-path-image.png" alt="Image 2">
+     </p>
+
+     <video autoplay muted height="400" width="600" controls>
+        <source src="../../../video/video-1.mp4" type="video/mp4">
+        <source src="../../../video/video-1.ogg" type="video/ogg">
+        Your browser does not support the video tag.
+<!-- // track element -->
+     </video>
+<!-- // play a song hosted online -->
+     <audio controls muted autoplay>
+        <source src="../../../audio/audio-1.mp3" type="audio/mpeg">
+        <source src="../../../audio/audio-1.ogg" type="audio/ogg">
+        Your browser does not support the audio element.
+     </audio>
+
+     <br>
+     <br>
+
+    <iframe width="420" height="315"
+    src="https://youtu.be/d_F2qdjxm-I">
+    </iframe>
+</body>
+</html>
