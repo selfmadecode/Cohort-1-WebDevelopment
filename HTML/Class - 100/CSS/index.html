@@ -3,78 +3,189 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous"> -->
-    <!-- internal css -->
+    <title>Introduction to CSS Styling</title>
     <style>
-        h1{
-            color: brown;
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            line-height: 1.7;
+            background-color: #f9f9f9;
+            color: #333;
         }
 
-        #paragraph{
-            color: green;
-        }
-        .paragraph{
-            color: red;
-            font-family: 'Courier New', Courier, monospace;
-        }
-        /*Anything here is a comment*/
-
-        /* .btn{
-            color: white;
-            cursor: pointer;
-            border: none;
-            border-radius: 10px;
-            font-size: small;
+        h1, h2, h3 {
+            color: #1a73e8;
         }
 
-        .btn-primary{
-            background-color: aqua;
+        pre, code {
+            background-color: #f4f4f4;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 14px;
         }
 
-        .btn-danger{
-            background-color: red;
-        } */
-
-        .text-color{
-            color: green;
-        }
-        p{
-            background-color: aqua;
-        }
-
-        div{
-            height: 100px;
+        table {
+            border-collapse: collapse;
             width: 100%;
-            background-color: powderblue;
-            outline-style: dotted;
-            outline-color: black;
-            outline-width: 4px;
+            margin-top: 10px;
+        }
+
+        th, td {
+            border: 1px solid #ccc;
+            padding: 8px 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #e3f2fd;
+        }
+
+        .highlight {
+            background-color: #fffde7;
+            padding: 10px;
+            border-left: 4px solid #ffb300;
+        }
+
+        .exercise {
+            background-color: #e8f5e9;
+            border-left: 4px solid #4caf50;
+            padding: 10px;
         }
     </style>
-
-    <!-- css syntax -->
-    <!-- selector -> h1, #paragraph, .paragraph -->
-     <!-- declaration -> color, text-align
-     value: red, center -->
 </head>
 <body>
 
-    <!-- <h1>Hello world</h1>
-    <p id="paragraph">Hello Nicole</p>
-    <p class="paragraph">A class</p>
+    <h1> Lesson Note: Introduction to CSS Styling</h1>
 
-    <button type="button" class="btn btn-danger">Click me</button> -->
-<!-- margin vs padding-->
-    <p style="margin-top: -5px;">This is a text</p>
-    <p style="padding-top: 5px;">This is a text styled with bootstrap</p>
+    <h2> Lesson Objective</h2>
+    <ul>
+        <li>Understand how CSS works and the different ways to apply it.</li>
+        <li>Know CSS syntax and how to write basic styles.</li>
+        <li>Differentiate between margin and padding.</li>
+        <li>Understand height and width in CSS.</li>
+        <li>Learn what Bootstrap is and why we use it.</li>
+        <li>Understand media queries and how to make websites responsive.</li>
+    </ul>
 
-        <!-- height vs width-->
+    <h2> What is CSS?</h2>
+    <p><strong>CSS (Cascading Style Sheets)</strong> is the language used to style and layout web pages — changing colors, spacing, fonts, or positioning elements. It works with HTML to make web pages look attractive.</p>
 
-        <div>
+    <h2> CSS Syntax</h2>
+    <pre><code>selector {
+  property: value;
+}</code></pre>
 
-        </div>
+    <p><strong>Selector</strong>: Targets the HTML element you want to style (e.g., h1, .class, #id)</p>
+    <p><strong>Property</strong>: The style feature to change (e.g., color, font-size)</p>
+    <p><strong>Value</strong>: The setting you want to apply (e.g., red, 20px)</p>
+
+    <pre><code>p {
+  color: blue;
+  font-size: 18px;
+}</code></pre>
+
+    <h2> Types of CSS Styling</h2>
+
+    <h3>1 Inline CSS</h3>
+    <pre><code>&lt;p style="color: red;"&gt;This text is red&lt;/p&gt;</code></pre>
+    <p>✅ Quick for testing<br>❌ Not ideal for large projects</p>
+
+    <h3>2 Internal CSS</h3>
+    <pre><code>&lt;style&gt;
+  h1 {
+    color: brown;
+  }
+&lt;/style&gt;</code></pre>
+    <p>✅ Good for small websites<br>❌ Not good for big projects</p>
+
+    <h3>3 External CSS</h3>
+    <pre><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></pre>
+    <p>✅ Best for professional and large projects<br>✅ Keeps code clean and reusable</p>
+
+    <h2>🧰 Using Bootstrap</h2>
+    <p><strong>Bootstrap</strong> is a popular CSS framework that helps you design responsive websites faster.</p>
+
+    <pre><code>&lt;link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"&gt;</code></pre>
+
+    <pre><code>&lt;button class="btn btn-primary"&gt;Click Me&lt;/button&gt;</code></pre>
+
+    <div class="highlight">
+         <strong>Why Bootstrap?</strong><br>
+        - Saves time — no need to write all CSS from scratch.<br>
+        - Makes sites look great on all devices.<br>
+        - Commonly used in modern web development.
+    </div>
+
+    <h2> CSS Margin vs Padding</h2>
+
+    <h3> Margin</h3>
+    <p>Space outside an element.</p>
+    <pre><code>p {
+  margin-top: 20px;
+}</code></pre>
+
+    <h3> Padding</h3>
+    <p>Space inside an element.</p>
+    <pre><code>p {
+  padding-top: 20px;
+}</code></pre>
+
+    <h3> Negative Values</h3>
+    <ul>
+        <li><strong>Negative Margin:</strong> Allowed; moves elements closer or overlaps them.</li>
+        <pre><code>p { margin-top: -5px; }</code></pre>
+        <li><strong>Negative Padding:</strong> ❌ Not allowed.</li>
+    </ul>
+
+    <h2> CSS Height and Width</h2>
+    <pre><code>div {
+  height: 100px;
+  width: 100%;
+}</code></pre>
+    <p> <strong>Tip:</strong> Use units like <code>px</code>, <code>%</code>, <code>vh</code>, or <code>vw</code> to control layout size.</p>
+
+    <h2> Responsive Design with Media Queries</h2>
+
+    <p>Media queries help web pages adjust to different screen sizes (mobile, tablet, desktop).</p>
+
+    <pre><code>@media (max-width: 600px) {
+  body {
+    background-color: lightblue;
+  }
+}</code></pre>
+
+    <p>When the screen is 600px or smaller, the background becomes light blue.</p>
+
+    <pre><code>@media (max-width: 768px) { ... }  /* Tablets */
+@media (max-width: 576px) { ... }  /* Mobile */</code></pre>
+
+    <h2> Summary Table</h2>
+    <table>
+        <tr><th>Concept</th><th>Description</th><th>Example</th></tr>
+        <tr><td>Inline CSS</td><td>Written inside HTML tag</td><td><code>&lt;p style="color:red;"&gt;</code></td></tr>
+        <tr><td>Internal CSS</td><td>Written inside &lt;style&gt; tag</td><td><code>&lt;style&gt;p{color:red;}&lt;/style&gt;</code></td></tr>
+        <tr><td>External CSS</td><td>Written in .css file</td><td><code>&lt;link rel="stylesheet" href="style.css"&gt;</code></td></tr>
+        <tr><td>Margin</td><td>Space outside box</td><td><code>margin:10px;</code></td></tr>
+        <tr><td>Padding</td><td>Space inside box</td><td><code>padding:10px;</code></td></tr>
+        <tr><td>Bootstrap</td><td>CSS Framework</td><td><code>&lt;button class="btn btn-primary"&gt;</code></td></tr>
+        <tr><td>Media Query</td><td>Responsive style</td><td><code>@media(max-width:600px){...}</code></td></tr>
+    </table>
+
+    <div class="exercise">
+        <h2> Class Exercise</h2>
+        <ol>
+            <li>Create a webpage with three <code>&lt;p&gt;</code> tags.</li>
+            <li>Style each one differently:
+                <ul>
+                    <li>First with <strong>inline CSS</strong></li>
+                    <li>Second with <strong>internal CSS</strong></li>
+                    <li>Third with <strong>external CSS</strong></li>
+                </ul>
+            </li>
+            <li>Use <strong>Bootstrap</strong> to style a button.</li>
+            <li>Add a <strong>media query</strong> that changes background color when the screen width is below 500px.</li>
+        </ol>
+    </div>
 
 </body>
 </html>
